@@ -17,7 +17,7 @@ export default function Hero() {
 
     try {
       // Insert into "waitlist" table
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from("waitlist")
         .insert({ email });
 
