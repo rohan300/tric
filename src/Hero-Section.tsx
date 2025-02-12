@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { supabase } from "@/lib/supabaseClient";
 
 export default function Hero() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!email) {
@@ -14,8 +15,23 @@ export default function Hero() {
       return;
     }
 
-    setMessage("Thank you for joining the waitlist! We will keep you updated!");
-    setEmail("");
+    try {
+      // Insert into "waitlist" table
+      const { data, error } = await supabase
+        .from("waitlist")
+        .insert({ email });
+
+      if (error) {
+        console.error(error);
+        setMessage("Error adding email to the waitlist. Please try again later.");
+      } else {
+        setMessage("Thank you for joining the waitlist! We will keep you updated!");
+        setEmail(""); // Clear the email field
+      }
+    } catch (err) {
+      console.error(err);
+      setMessage("An unexpected error occurred. Please try again later.");
+    }
   };
 
   return (
