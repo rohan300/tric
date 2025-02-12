@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { supabase } from "@/lib/supabaseClient";
 
 export default function WaitlistSection() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!email) {
@@ -12,16 +13,32 @@ export default function WaitlistSection() {
       return;
     }
 
-    setMessage("Thank you for joining the waitlist! We will keep you updated!");
-    setEmail("");
+    try {
+      // Insert into "waitlist" table
+      const { data, error } = await supabase
+        .from("waitlist")
+        .insert({ email });
+
+      if (error) {
+        console.error(error);
+        setMessage("Error adding email to the waitlist. Please try again later.");
+      } else {
+        setMessage("Thank you for joining the waitlist! We will keep you updated!");
+        setEmail(""); // Clear the email field
+      }
+    } catch (err) {
+      console.error(err);
+      setMessage("An unexpected error occurred. Please try again later.");
+    }
   };
+
   return (
     <div className="h-screen flex flex-col items-center justify-center px-6">
       <h2 className="text-6xl font-semibold text-[#494F62] mb-20 text-center">
         Don’t hesitate, Join our waitlist today!
       </h2>
       <div className="flex flex-col md:flex-row items-center gap-4">
-      <form onSubmit={handleSubmit} className="flex flex-col md:flex-row items-center gap-4">
+        <form onSubmit={handleSubmit} className="flex flex-col md:flex-row items-center gap-4">
           <input
             type="email"
             placeholder="Email here"
@@ -40,9 +57,7 @@ export default function WaitlistSection() {
       </div>
 
       {/* Message */}
-      {message && (
-        <p className="mt-4 text-lg text-green-600">{message}</p>
-      )}
+      {message && <p className="mt-4 text-lg text-green-600">{message}</p>}
     </div>
   );
 }
