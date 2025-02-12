@@ -75,12 +75,29 @@ const Carousel = React.forwardRef<
       setCanScrollNext(api.canScrollNext())
     }, [])
 
+    // Modified scrollPrev for wrap-around: if at the beginning, wrap to the last slide.
     const scrollPrev = React.useCallback(() => {
-      api?.scrollPrev()
+      if (!api) return
+
+      if (api.canScrollPrev()) {
+        api.scrollPrev()
+      } else {
+        const slides = api.slideNodes()
+        if (slides.length > 0) {
+          api.scrollTo(slides.length - 1)
+        }
+      }
     }, [api])
 
+    // Modified scrollNext for wrap-around: if at the end, wrap to the first slide.
     const scrollNext = React.useCallback(() => {
-      api?.scrollNext()
+      if (!api) return
+
+      if (api.canScrollNext()) {
+        api.scrollNext()
+      } else {
+        api.scrollTo(0)
+      }
     }, [api])
 
     const handleKeyDown = React.useCallback(
@@ -196,7 +213,11 @@ const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
-  const { orientation, scrollPrev, canScrollPrev } = useCarousel()
+  const { orientation, scrollPrev, api } = useCarousel()
+
+  // Instead of relying on canScrollPrev, disable the button only if there's 1 or fewer slides.
+  const slideCount = api?.slideNodes().length ?? 0
+  const isDisabled = slideCount <= 1
 
   return (
     <Button
@@ -204,13 +225,13 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute  h-8 w-8 rounded-full",
+        "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
           ? "-left-12 top-1/2 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
-      disabled={!canScrollPrev}
+      disabled={isDisabled}
       onClick={scrollPrev}
       {...props}
     >
@@ -225,7 +246,11 @@ const CarouselNext = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
-  const { orientation, scrollNext, canScrollNext } = useCarousel()
+  const { orientation, scrollNext, api } = useCarousel()
+
+  // Instead of relying on canScrollNext, disable the button only if there's 1 or fewer slides.
+  const slideCount = api?.slideNodes().length ?? 0
+  const isDisabled = slideCount <= 1
 
   return (
     <Button
@@ -239,7 +264,7 @@ const CarouselNext = React.forwardRef<
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
-      disabled={!canScrollNext}
+      disabled={isDisabled}
       onClick={scrollNext}
       {...props}
     >
