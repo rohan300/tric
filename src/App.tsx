@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import Home from "./sections/HeroSectionHome";
 import Testimonials from "./sections/HeroSectionTestimonial";
+import Features from "./sections/HeroSectionFeatures";
 import testimonialsData from "./data/testimonialData.json";
 
 
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <main className="flex-1">
         <Home />
         <Testimonials customData={testimonialsData} />
+        <Features />
       </main>
     </div>
   );
