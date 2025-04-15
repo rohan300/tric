@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
+import HeroSection from "./sections/HeroSection1";
 
 const App: React.FC = () => {
   return (
@@ -8,9 +9,8 @@ const App: React.FC = () => {
       <Header />
 
       {/* Main Content */}
-      <main className="flex-1 p-4">
-        <h1 className="text-2xl font-bold">Welcome to the App</h1>
-        <p>This is the body of your app.</p>
+      <main className="flex-1">
+        <HeroSection />
       </main>
     </div>
   );
