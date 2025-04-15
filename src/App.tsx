@@ -4,6 +4,8 @@ import Home from "./sections/HeroSectionHome";
 import Testimonials from "./sections/HeroSectionTestimonial";
 import Features from "./sections/HeroSectionFeatures";
 import Pricing from "./sections/HeroSectionPricing";
+import Waitlist from "./sections/HeroSectionWaitlist";
+import Footer from "./sections/HeroSectionFooter";
 import testimonialsData from "./data/testimonialData.json";
 
 
@@ -19,6 +21,8 @@ const App: React.FC = () => {
         <Testimonials customData={testimonialsData} />
         <Features />
         <Pricing />
+        <Waitlist />
+        <Footer />
       </main>
     </div>
   );
