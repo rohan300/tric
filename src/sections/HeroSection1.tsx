@@ -1,12 +1,9 @@
 "use client";
 import React from "react";
 import Image from "../assets/Dashboard-Home.png"
+import { FaArrowRight } from "react-icons/fa6";
 
-interface HeroSectionProps {
-  illustrationSrc?: string;
-}
-
-const HeroSection: React.FC<HeroSectionProps> = () => {
+const HeroSection: React.FC = () => {
   return (
     <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
@@ -25,19 +22,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             </button>
             <button className="flex justify-center items-center px-4 py-2 text-lg sm:text-xl leading-normal text-orange-400 hover:text-orange-500 transition-colors w-full sm:w-auto">
               <span>Watch video</span>
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                className="w-5 h-5 ml-2" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-              >
-                <path d="M5 12h14"></path>
-                <path d="M12 5l7 7-7 7"></path>
-              </svg>
+              <FaArrowRight className="ml-2" />
             </button>
           </div>
         </div>
@@ -48,9 +33,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               <img
                 src={Image}
                 alt="Schedule automation illustration"
-                // fill
                 className="object-contain"
-                // priority
               />
             </div>
         </div>
