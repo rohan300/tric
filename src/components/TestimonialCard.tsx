@@ -13,7 +13,6 @@ export interface TestimonialCardProps {
 }
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({
-  id,
   name,
   testimonialText,
   highlightedPhrases,
