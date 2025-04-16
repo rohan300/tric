@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
-import Image from "../assets/Dashboard-Home.png"
 import { FaArrowRight } from "react-icons/fa6";
+import Lottie from "lottie-react";
+import animationData from "../assets/HomeAnimation.json";
 
 const HeroSection: React.FC = () => {
   return (
@@ -26,16 +27,16 @@ const HeroSection: React.FC = () => {
             </button>
           </div>
         </div>
-
-        {/* Right side - Illustration */}
+        {/* Right side - Lottie Animation */}
         <div className="w-full lg:w-1/2 flex justify-center items-center mt-8 lg:mt-0">
-            <div className="relative w-full aspect-square max-w-lg">
-              <img
-                src={Image}
-                alt="Schedule automation illustration"
-                className="object-contain"
-              />
-            </div>
+          <div className="w-full max-w-lg">
+            <Lottie
+              animationData={animationData}
+              loop={true}
+              autoplay={true}
+              style={{ width: "100%", height: "auto" }}
+            />
+          </div>
         </div>
       </div>
     </div>

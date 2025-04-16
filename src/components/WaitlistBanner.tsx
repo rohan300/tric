@@ -3,15 +3,8 @@
 import React from "react";
 import Banner from "../assets/Banner.svg";
 import { FaArrowRight } from "react-icons/fa6";
-import { IoClose } from "react-icons/io5";
 
-interface AnnouncementBannerProps {
-  onClose?: () => void;
-}
-
-export const AnnouncementBanner: React.FC<AnnouncementBannerProps> = ({
-  onClose,
-}) => {
+export const AnnouncementBanner: React.FC = ({}) => {
   return (
     <div className="w-full text-black">
       <div className="relative w-full bg-amber-400 py-4 px-4 sm:px-6">
@@ -33,13 +26,6 @@ export const AnnouncementBanner: React.FC<AnnouncementBannerProps> = ({
               <FaArrowRight />
             </div>
           </div>
-          <button
-            onClick={onClose}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 focus:outline-none"
-            aria-label="Close announcement"
-          >
-            <IoClose />
-          </button>
         </div>
       </div>
     </div>

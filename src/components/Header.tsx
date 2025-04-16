@@ -5,17 +5,9 @@ import { AnnouncementBanner } from "./WaitlistBanner";
 import { NavigationHeader } from "./NavHeader";
 
 const Header: React.FC = () => {
-  const [showAnnouncement, setShowAnnouncement] = useState(true);
-
-  const handleCloseAnnouncement = () => {
-    setShowAnnouncement(false);
-  };
-
   return (
     <div>
-      {showAnnouncement && (
-        <AnnouncementBanner onClose={handleCloseAnnouncement} />
-      )}
+      <AnnouncementBanner />
       <NavigationHeader />
     </div>
   );
