@@ -1,13 +1,43 @@
 "use client";
-
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../assets/Tric Logo.svg";
 
-export const NavigationHeader: React.FC = () => {
+const NavigationHeader: React.FC = () => {
+  // IDs for the sections we want to track.
+  const sectionIds = ["feedback", "features", "pricing", "contact"];
+  const [activeSection, setActiveSection] = useState("");
+
+  const handleScroll = () => {
+    // Adding an offset for early detection.
+    const offset = 20;
+    const scrollPosition = window.scrollY + offset;
+    let currentSection = "";
+  
+    sectionIds.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) {
+        const { offsetTop, offsetHeight } = section;
+        if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          currentSection = id;
+        }
+      }
+    });
+  
+    setActiveSection(currentSection);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    // Fire the scroll handler once on mount to set the initial active section.
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="w-full flex justify-between items-center py-4 px-4 sm:px-6 lg:px-8 text-[#2A9D8F] bg-white shadow-sm">
+    <header className="w-full flex items-center py-4 px-4 sm:px-6 lg:px-8 bg-white shadow-sm">
       <div className="flex items-center">
-        {/* Clicking the logo scrolls to the Home section */}
+        {/* Logo */}
         <a href="#home">
           <img
             src={Logo}
@@ -15,43 +45,42 @@ export const NavigationHeader: React.FC = () => {
             alt="Tric logo"
           />
         </a>
+        {/* Navigation links aligned to the left, after the logo */}
+        <nav className="ml-8">
+          <ul className="flex space-x-6">
+            <li>
+              <a
+                href="#feedback"
+                className={`transition-colors duration-200 hover:underline ${
+                  activeSection === "feedback" ? "text-black" : "text-[#777767]"
+                }`}
+              >
+                Feedback
+              </a>
+            </li>
+            <li>
+              <a
+                href="#features"
+                className={`transition-colors duration-200 hover:underline ${
+                  activeSection === "features" ? "text-black" : "text-[#777767]"
+                }`}
+              >
+                Features
+              </a>
+            </li>
+            <li>
+              <a
+                href="#pricing"
+                className={`transition-colors duration-200 hover:underline ${
+                  activeSection === "pricing" ? "text-black" : "text-[#777767]"
+                }`}
+              >
+                Pricing
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav>
-        <ul className="flex space-x-6">
-          <li>
-            <a
-              href="#feedback"
-              className="hover:underline transition-colors duration-200"
-            >
-              Feedback
-            </a>
-          </li>
-          <li>
-            <a
-              href="#features"
-              className="hover:underline transition-colors duration-200"
-            >
-              Features
-            </a>
-          </li>
-          <li>
-            <a
-              href="#pricing"
-              className="hover:underline transition-colors duration-200"
-            >
-              Pricing
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              className="hover:underline transition-colors duration-200"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
     </header>
   );
 };
