@@ -1,13 +1,15 @@
 "use client";
 import React from "react";
 import PricingCard, { PricingCardProps } from "../components/PricingCard";
-import R from "../assets/react.svg";
+import Core from "../assets/core.svg";
+import Plus from "../assets/plus.svg";
+import Pro from "../assets/pro.svg";
 import FadeInSection from "../components/FadeInSection";
 
 const HeroSectionPricing: React.FC = () => {
   const cards: PricingCardProps[] = [
     {
-      iconSrc: R,
+      iconSrc: Core,
       headerSubtitle: "For students who just want the essentials to get started",
       headerTitle: "CORE",
       description: "Perfect for staying organized with minimal setup. It is everything you need.",
@@ -22,7 +24,7 @@ const HeroSectionPricing: React.FC = () => {
       highlighted: false,
     },
     {
-      iconSrc: R,
+      iconSrc: Plus,
       headerSubtitle: "For students who want a smarter, more flexible schedule",
       headerTitle: "PLUS",
       description: "Great for busy weeks when things don't always go as planned.",
@@ -37,7 +39,7 @@ const HeroSectionPricing: React.FC = () => {
       highlighted: true,
     },
     {
-      iconSrc: R,
+      iconSrc: Pro,
       headerSubtitle: "For students who want full control and zero stress",
       headerTitle: "PRO",
       description:

@@ -26,7 +26,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({ customData }) =
     let scrollPosition = 0;
     let lastTimestamp: number | null = null;
     // Speed in pixels per millisecond (adjust as needed)
-    const scrollSpeed = 0.1;
+    const scrollSpeed = 0.07;
 
     const scroll = (timestamp: number) => {
       if (lastTimestamp !== null) {
