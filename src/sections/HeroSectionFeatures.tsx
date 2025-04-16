@@ -63,12 +63,6 @@ const HeroSection: React.FC = () => {
       // Set padding: top 5vh and bottom 10vh
       style={{ paddingTop: "5vh", paddingBottom: "5vh" }}
     >
-      <FadeInSection>
-        <h2 className="mb-8 text-center text-3xl font-bold">
-          Features
-        </h2>
-      </FadeInSection>
-      {/* Full height container to allow the content area to grow */}
       <div className="h-full flex flex-col">
         {/* Navigation Buttons */}
         <FadeInSection>
@@ -87,14 +81,14 @@ const HeroSection: React.FC = () => {
           {/* Content area fills remaining space */}
           <div className="flex-1 flex flex-col md:flex-row md:justify-between gap-8 px-[15vw] py-[10vh]">
             {/* Left side: Text content */}
-            <div className="flex-1 text-center md:text-left space-y-4">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+            <div className="flex-1 text-center md:text-left font-inter">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-[5vh]" style={{ color: "#401700" }}>
                 {content.heading}
               </h2>
-              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-stone-700">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-black mb-[5vh]">
                 {content.subHeading}
               </h3>
-              <p className="text-base sm:text-lg md:text-xl text-neutral-500">
+              <p className="text-base sm:text-lg md:text-xl" style={{ color: "#707070" }}>
                 {content.description}
               </p>
             </div>
@@ -112,7 +106,7 @@ const HeroSection: React.FC = () => {
         {/* New video walkthrough link */}
         <FadeInSection>
           <div className="flex justify-center items-center mt-auto mb-8">
-            <button className="flex items-center gap-2 text-lg font-medium text-stone-700 hover:text-stone-900 transition-colors">
+            <button className="flex items-center gap-2 text-lg font-inter font-light text-black">
               <span>See Walkthrough Video</span>
               <img src={PlayIcon} alt="Play video" className="w-6 h-6" />
             </button>
