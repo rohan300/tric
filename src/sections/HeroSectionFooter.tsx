@@ -15,17 +15,17 @@ const Footer: React.FC = () => {
         <img src={Logo} alt="Tric logo" className="h-10 w-auto" />
       </div>
       {/* Copyright */}
-      <div className="flex items-center text-lg font-medium leading-10 text-stone-300">
+      <div className="flex items-center text-lg font-inter font-medium leading-10 text-[#CCCCCC]">
         <FaRegCopyright className="mr-1" />
         2025 Tric Technologies, Inc. All rights reserved.
       </div>
       {/* Social Media Icons */}
       <div className="flex gap-4">
         <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-          <FaLinkedinIn className="text-white text-xl hover:text-teal-600 transition-colors" />
+          <FaLinkedinIn className="text-[#FFE2D2] text-xl hover:text-teal-600 transition-colors" />
         </a>
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-          <FaInstagram className="text-white text-xl hover:text-teal-600 transition-colors" />
+          <FaInstagram className="text-[#FFE2D2] text-xl hover:text-teal-600 transition-colors" />
         </a>
       </div>
     </footer>
