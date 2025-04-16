@@ -18,12 +18,22 @@ const App: React.FC = () => {
       </div>
 
       <main className="flex-1">
-        <Home />
-        <Testimonials customData={testimonialsData} />
-        <Features />
-        <Pricing />
+        <div id="home">
+          <Home />
+        </div>
+        <div id="feedback" className="anchor-offset">
+          <Testimonials customData={testimonialsData} />
+        </div>
+        <div id="features" className="anchor-offset">
+          <Features />
+        </div>
+        <div id="pricing" className="anchor-offset">
+          <Pricing />
+        </div>
         <Waitlist />
-        <Footer />
+        <div id="contact">
+          <Footer />
+        </div>
       </main>
     </div>
   );

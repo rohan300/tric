@@ -62,19 +62,19 @@ const HeroSectionPricing: React.FC = () => {
       style={{ paddingTop: "5vh", paddingBottom: "5vh" }}
     >
       <FadeInSection>
-      <h2 className="mb-8 text-center text-3xl font-bold">
-        Our Pricing Plans
-      </h2>
+        <h2 className="mb-8 text-center text-3xl font-bold">
+          Our Pricing Plans
+        </h2>
       </FadeInSection>
+      {/* Disable transform animation to avoid extra spacing */}
       <FadeInSection>
-      {/* Cards container will fill the remaining vertical space */}
-      <div className="flex-1 flex flex-col gap-6 md:flex-row md:justify-center md:items-stretch px-[20vh]">
-        {cards.map((card, index) => (
-          <div key={index} className="flex-1">
-            <PricingCard {...card} />
-          </div>
-        ))}
-      </div>
+        <div className="flex-1 flex flex-col gap-6 md:flex-row md:justify-center md:items-stretch px-[20vh] pt-[5vh]">
+          {cards.map((card, index) => (
+            <div key={index} className="flex-1">
+              <PricingCard {...card} />
+            </div>
+          ))}
+        </div>
       </FadeInSection>
     </section>
   );

@@ -10,6 +10,17 @@
   scrollbar-width: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.anchor-offset::before {
+  content: "";
+  display: flex;
+  height: 10vh;
+  visibility: hidden;
+}
+
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
