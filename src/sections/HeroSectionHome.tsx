@@ -10,20 +10,20 @@ const HeroSection: React.FC = () => {
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
         {/* Left side - Text content */}
         <div className="flex flex-col gap-6 w-full lg:w-1/2 items-center text-center lg:items-start lg:text-left">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-zinc-800">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-inter font-bold leading-tight text-zinc-800">
             Plan Your Day In Seconds
           </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-neutral-600 max-w-lg">
+          <p className="text-lg sm:text-xl lg:text-2xl font-inter font-light leading-relaxed text-neutral-600 max-w-lg">
             Automate your schedule based on your priorities and preferences.
             Integrates with Canvas and Google Calendar.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center w-full sm:w-auto">
             <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSf1yiqVtS02hOy3sRtXTdhsWcKsKzS5clDJTA9Hfw1rdOw3cw/viewform">
-              <button className="px-6 py-3 text-lg sm:text-xl leading-normal text-white bg-orange-400 rounded-full hover:bg-orange-500 transition-colors w-full sm:w-auto">
+              <button className="px-6 py-3 text-lg sm:text-xl leading-normal text-[#FEFEFE] font-inter bg-[#ED7937] rounded-full hover:bg-orange-500 transition-colors w-full sm:w-auto">
                 Join Waitlist
               </button>
             </a>
-            <button className="flex justify-center items-center px-4 py-2 text-lg sm:text-xl leading-normal text-orange-400 hover:text-orange-500 transition-colors w-full sm:w-auto">
+            <button className="flex justify-center items-center px-4 py-2 text-lg sm:text-xl leading-normal text-[#ED7937] font-inter transition-colors w-full sm:w-auto">
               <span>Watch video</span>
               <FaArrowRight className="ml-2" />
             </button>

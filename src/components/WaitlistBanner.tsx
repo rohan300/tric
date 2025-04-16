@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 export const AnnouncementBanner: React.FC = ({}) => {
   return (
-    <div className="w-full text-black">
+    <div className="w-full text-black font-inter">
       <div className="relative w-full bg-amber-400 py-4 px-4 sm:px-6">
         <div className="flex justify-center items-center w-full">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 w-full max-w-6xl">
