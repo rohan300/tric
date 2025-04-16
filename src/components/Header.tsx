@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { AnnouncementBanner } from "./WaitlistBanner";
 import { NavigationHeader } from "./NavHeader";
 

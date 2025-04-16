@@ -51,21 +51,23 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({ customData }) =
   }, []);
 
   return (
-    <section className="w-full py-12 md:py-16 lg:py-20 overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section className="h-[90vh] w-full py-12 md:py-16 lg:py-20 overflow-hidden">
+      {/* Heading container */}
+      <div className="container mx-auto px-4 pt-[5vh]">
         {/* Combined heading text on one line */}
-        <h2 className="mb-10 md:mb-16 text-center text-stone-600 text-xl md:text-2xl font-light whitespace-nowrap">
+        <h2 className="mb-10 md:mb-16 text-center text-stone-600 text-xl md:text-4xl font-light whitespace-nowrap">
           Join Our{" "}
           <span 
-            className="inline-block text-3xl md:text-4xl lg:text-5xl font-semibold mb-2"
+            className="inline-block text-3xl md:text-6xl lg:text-6xl font-semibold mb-2"
             style={{ fontFamily: "Baloo, sans-serif" }}
           >
             Tric
           </span>{" "}
           Community with students from Universities across the United States
         </h2>
-
-        {/* Scrolling container for testimonials */}
+      </div>
+      {/* Full-width container for testimonials with 10vh top padding */}
+      <div className="w-full pt-[5vh]">
         <div 
           ref={scrollRef}
           className="flex overflow-x-hidden gap-5 py-4"

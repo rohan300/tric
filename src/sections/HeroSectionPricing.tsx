@@ -39,7 +39,8 @@ const HeroSectionPricing: React.FC = () => {
       iconSrc: R,
       headerSubtitle: "For students who want full control and zero stress",
       headerTitle: "PRO",
-      description: "Ideal for students juggling packed schedules and ambitious goals.",
+      description:
+        "Ideal for students juggling packed schedules and ambitious goals.",
       price: "$9.99",
       period: "/monthly",
       features: [
@@ -55,11 +56,15 @@ const HeroSectionPricing: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 px-4 sm:px-6 md:px-8">
+    <section
+      className="h-[90vh] w-full px-[5vh] sm:px-6 md:px-8 flex flex-col"
+      style={{ paddingTop: "5vh", paddingBottom: "5vh" }}
+    >
       <h2 className="mb-8 text-center text-3xl font-bold">
         Our Pricing Plans
       </h2>
-      <div className="flex flex-col gap-6 md:flex-row md:justify-center md:items-stretch">
+      {/* Cards container will fill the remaining vertical space */}
+      <div className="flex-1 flex flex-col gap-6 md:flex-row md:justify-center md:items-stretch px-[20vh]">
         {cards.map((card, index) => (
           <div key={index} className="flex-1">
             <PricingCard {...card} />
