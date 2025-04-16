@@ -4,9 +4,11 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaRegCopyright } from "react-icons/fa6";
 import Logo from "../assets/Tric Logo.svg";
+import FadeInSection from "../components/FadeInSection";
 
 const Footer: React.FC = () => {
   return (
+    <FadeInSection>
     <footer className="flex flex-col items-center justify-center px-5 py-12 w-full bg-[#200C00]">
       {/* Logo and Brand */}
       <div className="flex gap-2.5 items-center">
@@ -27,6 +29,7 @@ const Footer: React.FC = () => {
         </a>
       </div>
     </footer>
+    </FadeInSection>
   );
 };
 

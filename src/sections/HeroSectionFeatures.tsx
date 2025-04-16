@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import TabButton from "../components/TabButton";
 import Image from "../assets/Dashboard-Home.png"
+import FadeInSection from "../components/FadeInSection";
 
 const HeroSection: React.FC = () => {
   // Define the four tabs and their corresponding content.
@@ -61,12 +62,15 @@ const HeroSection: React.FC = () => {
       // Set padding: top 5vh and bottom 10vh
       style={{ paddingTop: "5vh", paddingBottom: "5vh" }}
     >
+      <FadeInSection>
       <h2 className="mb-8 text-center text-3xl font-bold">
         Features
       </h2>
+      </FadeInSection>
       {/* Full height container to allow the content area to grow */}
       <div className="h-full flex flex-col">
         {/* Navigation Buttons */}
+        <FadeInSection>
         <nav className="flex flex-wrap justify-center gap-4 mb-8">
           {tabs.map((tab) => (
             <TabButton
@@ -77,7 +81,8 @@ const HeroSection: React.FC = () => {
             />
           ))}
         </nav>
-
+        </FadeInSection>
+        <FadeInSection>
         {/* Content area fills remaining space */}
         <div className="flex-1 flex flex-col md:flex-row md:justify-between gap-8 px-[15vw] py-[10vh]">
           {/* Left side: Text content */}
@@ -101,6 +106,7 @@ const HeroSection: React.FC = () => {
             />
           </div>
         </div>
+        </FadeInSection>
       </div>
     </section>
   );

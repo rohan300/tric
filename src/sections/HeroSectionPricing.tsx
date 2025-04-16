@@ -2,6 +2,7 @@
 import React from "react";
 import PricingCard, { PricingCardProps } from "../components/PricingCard";
 import R from "../assets/react.svg";
+import FadeInSection from "../components/FadeInSection";
 
 const HeroSectionPricing: React.FC = () => {
   const cards: PricingCardProps[] = [
@@ -60,9 +61,12 @@ const HeroSectionPricing: React.FC = () => {
       className="h-[90vh] w-full px-[5vh] sm:px-6 md:px-8 flex flex-col"
       style={{ paddingTop: "5vh", paddingBottom: "5vh" }}
     >
+      <FadeInSection>
       <h2 className="mb-8 text-center text-3xl font-bold">
         Our Pricing Plans
       </h2>
+      </FadeInSection>
+      <FadeInSection>
       {/* Cards container will fill the remaining vertical space */}
       <div className="flex-1 flex flex-col gap-6 md:flex-row md:justify-center md:items-stretch px-[20vh]">
         {cards.map((card, index) => (
@@ -71,6 +75,7 @@ const HeroSectionPricing: React.FC = () => {
           </div>
         ))}
       </div>
+      </FadeInSection>
     </section>
   );
 };

@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
+import FadeInSection from "../components/FadeInSection";
 
 const WaitlistSection: React.FC = () => {
   return (
+    <FadeInSection>
     <section className="flex flex-col items-center justify-center px-5 py-9 w-full mx-auto bg-orange-400">
       <h1 className="text-4xl font-bold tracking-wide text-center text-white leading-[57.6px]">
         The time is right now
@@ -11,6 +13,7 @@ const WaitlistSection: React.FC = () => {
         Join Waitlist for Free
       </button>
     </section>
+    </FadeInSection>
   );
 };
 

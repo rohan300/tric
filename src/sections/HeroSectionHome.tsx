@@ -3,6 +3,7 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import Lottie from "lottie-react";
 import animationData from "../assets/HomeAnimation.json";
+import FadeInSection from "../components/FadeInSection";
 
 const HeroSection: React.FC = () => {
   return (

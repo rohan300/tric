@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import TestimonialCard, { TestimonialCardProps } from "../components/TestimonialCard";
 import testimonialsData from "../data/testimonialData.json";
+import FadeInSection from "../components/FadeInSection";
 
 interface TestimonialSectionProps {
   // Optional prop to override the default data source
@@ -52,6 +53,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({ customData }) =
 
   return (
     <section className="h-[90vh] w-full py-12 md:py-16 lg:py-20 overflow-hidden">
+      <FadeInSection>
       {/* Heading container */}
       <div className="container mx-auto px-4 pt-[5vh]">
         {/* Combined heading text on one line */}
@@ -66,6 +68,8 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({ customData }) =
           Community with students from Universities across the United States
         </h2>
       </div>
+      </FadeInSection>
+      <FadeInSection>
       {/* Full-width container for testimonials with 10vh top padding */}
       <div className="w-full pt-[5vh]">
         <div 
@@ -84,6 +88,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({ customData }) =
           ))}
         </div>
       </div>
+      </FadeInSection>
     </section>
   );
 };
