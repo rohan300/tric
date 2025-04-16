@@ -96,11 +96,13 @@ const PricingCard: React.FC<PricingCardProps> = ({
           </ul>
         </div>
         {/* Call-to-action Button */}
+        <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSf1yiqVtS02hOy3sRtXTdhsWcKsKzS5clDJTA9Hfw1rdOw3cw/viewform">
         <button
           className={`mt-6 py-2 px-4 w-full rounded-full font-bold transition-colors duration-200 ${buttonBg} ${buttonTextColor}`}
         >
           {buttonText}
         </button>
+        </a>
       </div>
     </article>
   );

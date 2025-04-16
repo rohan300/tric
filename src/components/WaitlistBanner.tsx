@@ -20,10 +20,12 @@ export const AnnouncementBanner: React.FC = ({}) => {
             </div>
             <div className="flex items-center gap-2 text-sm font-medium">
               <div className="relative">
-                <button className="focus:outline-none">Register now</button>
+                <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSf1yiqVtS02hOy3sRtXTdhsWcKsKzS5clDJTA9Hfw1rdOw3cw/viewform" className="text-black hover:underline">
+                  <button className="focus:outline-none">Register now</button>
+                </a>
                 <div className="absolute bottom-0 left-0 right-0 h-px bg-black" />
               </div>
-              <FaArrowRight />
+                  <FaArrowRight />
             </div>
           </div>
         </div>

@@ -18,7 +18,7 @@ const HeroSectionPricing: React.FC = () => {
         "Auto Scheduling (Plan up to 2 weeks ahead)",
         "Basic Personalization (working hrs + difficulty)",
       ],
-      buttonText: "Get started",
+      buttonText: "Join Waitlist",
       highlighted: false,
     },
     {
@@ -33,7 +33,7 @@ const HeroSectionPricing: React.FC = () => {
         "Auto Scheduling (Plan up to 3 weeks ahead)",
         "Limited Auto Rescheduling (minor changes, major help)",
       ],
-      buttonText: "Get started",
+      buttonText: "Join Waitlist",
       highlighted: true,
     },
     {
@@ -51,7 +51,7 @@ const HeroSectionPricing: React.FC = () => {
         "Instant, Unlimited Rescheduling",
         "Premium Support (faster responses + priority help)",
       ],
-      buttonText: "Get started",
+      buttonText: "Join Waitlist",
       highlighted: false,
     },
   ];

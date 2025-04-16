@@ -18,9 +18,11 @@ const HeroSection: React.FC = () => {
             Integrates with Canvas and Google Calendar.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center w-full sm:w-auto">
-            <button className="px-6 py-3 text-lg sm:text-xl leading-normal text-white bg-orange-400 rounded-full hover:bg-orange-500 transition-colors w-full sm:w-auto">
-              Join Waitlist
-            </button>
+            <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSf1yiqVtS02hOy3sRtXTdhsWcKsKzS5clDJTA9Hfw1rdOw3cw/viewform">
+              <button className="px-6 py-3 text-lg sm:text-xl leading-normal text-white bg-orange-400 rounded-full hover:bg-orange-500 transition-colors w-full sm:w-auto">
+                Join Waitlist
+              </button>
+            </a>
             <button className="flex justify-center items-center px-4 py-2 text-lg sm:text-xl leading-normal text-orange-400 hover:text-orange-500 transition-colors w-full sm:w-auto">
               <span>Watch video</span>
               <FaArrowRight className="ml-2" />
