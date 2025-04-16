@@ -9,6 +9,7 @@ export interface TestimonialCardProps {
   testimonialText: string;
   highlightedPhrases: string[];
   university: string;
+  year: string; // New property for the year
 }
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({
@@ -17,6 +18,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   testimonialText,
   highlightedPhrases,
   university,
+  year,
 }) => {
   // Function to render testimonial text with highlighted phrases
   const renderTestimonial = () => {
@@ -63,14 +65,15 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       </div>
       
       {/* Card content */}
-      <header className="mb-4 text-sm uppercase text-stone-600 font-medium z-10 relative">
+      <header className="mb-4 text-sm uppercase font-medium z-10 relative font-ag-inner-title" style={{ color: "#6D5E56" }}>
         {name}
       </header>
-      <section className="mb-auto text-lg text-stone-950 leading-relaxed z-10 relative">
+      <section className="mb-auto text-lg leading-relaxed z-10 relative font-inter-medium" style={{ color: "#200C00" }}>
         {renderTestimonial()}
       </section>
-      <footer className="text-sm uppercase text-stone-600 mt-4 z-10 relative">
-        {university}
+      <footer className="flex flex-col items-start mt-4 z-10 relative font-ag-inner-title text-sm uppercase" style={{ color: "#6D5E56" }}>
+        <span>{year}</span>
+        <span>{university}</span>
       </footer>
     </article>
   );

@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'AG Inner Title';
+  src: url('../assets/fonts/AGInnerTitle-Regular.woff2') format('woff2'),
+       url('../assets/fonts/AGInnerTitle-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,6 +32,23 @@ html {
   display: flex;
   height: 10vh;
   visibility: hidden;
+}
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-baloo: 'Baloo 2', cursive;
+  --font-ag-inner-title: 'AG Inner Title', sans-serif;
+}
+
+/* Define Inter-Medium specifically */
+.font-inter-medium {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+/* Define AG Inner Title font */
+.font-ag-inner-title {
+  font-family: 'AG Inner Title', sans-serif;
 }
 
 /* :root {

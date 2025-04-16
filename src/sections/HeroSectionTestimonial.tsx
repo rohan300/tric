@@ -57,11 +57,10 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({ customData }) =
       {/* Heading container */}
       <div className="container mx-auto px-4 pt-[5vh]">
         {/* Combined heading text on one line */}
-        <h2 className="mb-10 md:mb-16 text-center text-stone-600 text-xl md:text-4xl font-light whitespace-nowrap">
+        <h2 className="mb-10 md:mb-16 text-center text-xl md:text-4xl font-light whitespace-nowrap font-inter text-[#6D5E56]">
           Join Our{" "}
           <span 
-            className="inline-block text-3xl md:text-6xl lg:text-6xl font-semibold mb-2"
-            style={{ fontFamily: "Baloo, sans-serif" }}
+            className="inline-block text-3xl md:text-6xl lg:text-6xl font-bold mb-2 font-baloo"
           >
             Tric
           </span>{" "}
@@ -83,6 +82,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({ customData }) =
               name={testimonial.name}
               testimonialText={testimonial.testimonialText}
               highlightedPhrases={testimonial.highlightedPhrases}
+              year={testimonial.year}
               university={testimonial.university}
             />
           ))}

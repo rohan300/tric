@@ -5,56 +5,64 @@
       "name": "RIDDHIMA.",
       "testimonialText": "\"Two weeks ago, I had an orgo exam, chem exam, bio exam, ochem lab report, and physiology lab report all due within a week. If I had this, I would [not have crashed out].\"",
       "highlightedPhrases": ["not have crashed out"],
-      "university": "FRESHMAN, CASE WESTERN RESERVE UNIVERSITY"
+      "year": "FRESHMAN",
+      "university": "CASE WESTERN RESERVE UNIVERSITY"
     },
     {
       "id": "246_3391",
       "name": "SHIRLEY.",
       "testimonialText": "\"Just this week, There were two tests in two [consecutive] days. So I feel like when there are multiple things in quick succession...you need to know how to [prioritize] which one.\"",
       "highlightedPhrases": ["consecutive", "prioritize"],
-      "university": "PRE-MED STUDENT, GEORGETOWN UNIVERSITY"
+      "year": "FRESHMAN",
+      "university": "GEORGETOWN UNIVERSITY"
     },
     {
       "id": "246_3398",
       "name": "SHREYA.",
       "testimonialText": "\"I need this. It's not in anything else that I use.\"",
       "highlightedPhrases": [],
-      "university": "FRESHMAN, BOSTON UNIVERSITY"
+      "year": "FRESHMAN",
+      "university": "BOSTON UNIVERSITY"
     },
     {
       "id": "246_3399",
       "name": "ALEX.",
       "testimonialText": "\"My schedule changes every week and I struggle to [stay on top] of all my assignments. This would be a game-changer for me.\"",
       "highlightedPhrases": ["stay on top"],
-      "university": "JUNIOR, UNIVERSITY OF MICHIGAN"
+      "year": "FRESHMAN",
+      "university": "UNIVERSITY OF MICHIGAN"
     },
     {
       "id": "246_3400",
       "name": "MADISON.",
       "testimonialText": "\"Between my classes, research lab, and club meetings, I'm constantly [overwhelmed]. This tool would help me balance everything better.\"",
       "highlightedPhrases": ["overwhelmed"],
-      "university": "SOPHOMORE, CORNELL UNIVERSITY"
+      "year": "FRESHMAN",
+      "university": "CORNELL UNIVERSITY"
     },
     {
       "id": "246_3401",
       "name": "JORDAN.",
       "testimonialText": "\"As a student athlete, I need all the help I can get to [manage my time] between practice, games, and keeping up with coursework.\"",
       "highlightedPhrases": ["manage my time"],
-      "university": "SENIOR, UCLA"
+      "year": "FRESHMAN",
+      "university": "UCLA"
     },
     {
       "id": "246_3402",
       "name": "TAYLOR.",
       "testimonialText": "\"Having a tool that could automatically organize my schedule would [save me hours] every week that I could use for studying or self-care.\"",
       "highlightedPhrases": ["save me hours"],
-      "university": "GRADUATE STUDENT, NYU"
+      "year": "FRESHMAN",
+      "university": "NYU"
     },
     {
       "id": "246_3403",
       "name": "CAMERON.",
       "testimonialText": "\"I'm taking 18 credits this semester while working part-time. I [desperately need] something to help me plan efficiently.\"",
       "highlightedPhrases": ["desperately need"],
-      "university": "JUNIOR, UNIVERSITY OF WASHINGTON"
+      "year": "FRESHMAN",
+      "university": "UNIVERSITY OF WASHINGTON"
     }
   ]
 }
