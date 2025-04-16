@@ -8,11 +8,11 @@ const HeroSectionPricing: React.FC = () => {
   const cards: PricingCardProps[] = [
     {
       iconSrc: R,
-      headerSubtitle: "For students who just want the essentials",
+      headerSubtitle: "For students who just want the essentials to get started",
       headerTitle: "CORE",
-      description: "Perfect for staying organized with minimal setup.",
+      description: "Perfect for staying organized with minimal setup. It is everything you need.",
       price: "$3.99",
-      period: "/monthly",
+      period: "/month",
       features: [
         "Canvas Sync",
         "Auto Scheduling (Plan up to 2 weeks ahead)",
@@ -27,7 +27,7 @@ const HeroSectionPricing: React.FC = () => {
       headerTitle: "PLUS",
       description: "Great for busy weeks when things don't always go as planned.",
       price: "$6.99",
-      period: "/monthly",
+      period: "/month",
       features: [
         "Canvas Sync",
         "Auto Scheduling (Plan up to 3 weeks ahead)",
@@ -43,7 +43,7 @@ const HeroSectionPricing: React.FC = () => {
       description:
         "Ideal for students juggling packed schedules and ambitious goals.",
       price: "$9.99",
-      period: "/monthly",
+      period: "/month",
       features: [
         "Canvas Sync",
         "Auto Scheduling (Plan up to 4 weeks ahead)",
@@ -62,11 +62,10 @@ const HeroSectionPricing: React.FC = () => {
       style={{ paddingTop: "5vh", paddingBottom: "5vh" }}
     >
       <FadeInSection>
-        <h2 className="mb-8 text-center text-3xl font-bold">
+        <h2 className="mb-8 text-center text-4xl font-inter font-bold">
           Our Pricing Plans
         </h2>
       </FadeInSection>
-      {/* Disable transform animation to avoid extra spacing */}
       <FadeInSection>
         <div className="flex-1 flex flex-col gap-6 md:flex-row md:justify-center md:items-stretch px-[20vh] pt-[5vh]">
           {cards.map((card, index) => (

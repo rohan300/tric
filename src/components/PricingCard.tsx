@@ -39,6 +39,14 @@ const PricingCard: React.FC<PricingCardProps> = ({
   const buttonBg = highlighted ? "bg-white" : "bg-orange-400";
   const buttonTextColor = highlighted ? "text-orange-400" : "text-white";
 
+  // Text styling
+  const headerSubtitleText = highlighted ? "text-[#EFF0F6]" : "text-[#6F6C90]";
+  const headerTitleText = highlighted ? "text-white" : "text-[#170F49]";
+  const descriptionText = highlighted ? "text-[#EFF0F6]" : "text-[#6F6C90]";
+  const priceText = highlighted ? "text-white" : "text-[#170F49]";
+  const periodText = highlighted ? "text-[#D9DBE9]" : "text-[#6F6C90]";
+  const featuresText = highlighted ? "text-white" : "text-[#170F49]";
+
   return (
     <article
       className={`flex flex-col h-full p-6 rounded-3xl border border-gray-200 shadow-sm ${cardBg} ${cardText} w-full`}
@@ -55,14 +63,14 @@ const PricingCard: React.FC<PricingCardProps> = ({
           <div className="w-16 h-16 bg-gray-300 rounded-full" />
         )}
         <div className="flex flex-col">
-          <p className="text-sm font-medium">{headerSubtitle}</p>
-          <h2 className="text-2xl font-bold">{headerTitle}</h2>
+          <p className={`${headerSubtitleText} font-inter font-medium`}>{headerSubtitle}</p>
+          <h2 className={`text-2xl ${headerTitleText} font-inter font-bold`}>{headerTitle}</h2>
         </div>
       </header>
 
       {/* Optional description */}
       {description && (
-        <p className="mt-4 text-base">
+        <p className={`mt-4 text-dm-sans ${descriptionText}`}>
           {description}
         </p>
       )}
@@ -72,12 +80,12 @@ const PricingCard: React.FC<PricingCardProps> = ({
         <div>
           {/* Price Section */}
           <div className="flex items-center justify-center gap-2">
-            <span className="text-5xl font-bold">{price}</span>
-            <span className="text-xl font-medium">{period}</span>
+            <span className={`text-5xl font-dm-sans font-bold ${priceText}`}>{price}</span>
+            <span className={`text-xl font-dm-sans font-medium ${periodText}`}>{period}</span>
           </div>
 
           {/* Features List */}
-          <h3 className="mt-6 text-lg font-semibold">What's included</h3>
+          <h3 className={`mt-6 text-lg font-dm-sans ${featuresText}`}>What's included</h3>
           <ul className="mt-4 space-y-2">
             {features.map((feature, index) => (
               <li key={index} className="flex items-center gap-2">
@@ -88,7 +96,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
                     className="w-4 h-4"
                   />
                 </div>
-                <span className="text-base whitespace-pre-line">
+                <span className={`text-base whitespace-pre-line font-dm-sans font-bold ${featuresText}`}>
                   {feature}
                 </span>
               </li>
@@ -98,7 +106,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
         {/* Call-to-action Button */}
         <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSf1yiqVtS02hOy3sRtXTdhsWcKsKzS5clDJTA9Hfw1rdOw3cw/viewform">
         <button
-          className={`mt-6 py-2 px-4 w-full rounded-full font-bold transition-colors duration-200 ${buttonBg} ${buttonTextColor}`}
+          className={`mt-6 py-2 px-4 w-full rounded-full font-dm-sans font-bold ${buttonBg} ${buttonTextColor}`}
         >
           {buttonText}
         </button>

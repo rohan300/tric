@@ -8,9 +8,9 @@ export default {
     extend: {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
-        'inter-medium': ['Inter', 'sans-serif'],
         baloo: ['"Baloo 2"', 'cursive'],
         'ag-inner-title': ['"AG Inner Title"', 'sans-serif'],
+        'dm-sans': ['"DM Sans"', 'sans-serif']
       },
   },
   plugins: [],
