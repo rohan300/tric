@@ -7,7 +7,7 @@ interface HighlightedTextProps {
 
 const HighlightedText: React.FC<HighlightedTextProps> = ({ children }) => {
   return (
-    <span className="bg-amber-200 px-1 font-medium">
+    <span className="text-[#ED7937] px-1 font-medium">
       {children}
     </span>
   );
