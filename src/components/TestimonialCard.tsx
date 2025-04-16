@@ -32,7 +32,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
     // Split by markers
     const parts = result.split(/__(HIGHLIGHT_\d+)__/);
-    
+
     // Render parts
     return parts.map((part, index) => {
       if (part.startsWith('HIGHLIGHT_')) {
@@ -48,14 +48,20 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   };
 
   return (
-    <article className="flex flex-col justify-between p-5 rounded-3xl bg-neutral-100 h-80 w-80 sm:w-72 md:w-80 lg:w-80 shrink-0">
-      <header className="mb-4 text-sm uppercase text-stone-600 font-medium">
+    <article 
+      className="flex flex-col justify-between p-5 rounded-3xl h-80 w-80 sm:w-72 md:w-80 lg:w-80 shrink-0 relative overflow-hidden"
+      style={{
+        background: "linear-gradient(to right top, rgba(237, 121, 55, 0.35), rgba(255, 175, 55, 0.25), rgba(255, 255, 255, 0.25), rgba(42, 157, 143, 0.35))"
+      }}
+    >
+      {/* Card content */}
+      <header className="mb-4 text-sm uppercase text-stone-600 font-medium z-10">
         {name}
       </header>
-      <section className="mb-auto text-lg text-stone-950 leading-relaxed">
+      <section className="mb-auto text-lg text-stone-950 leading-relaxed z-10">
         {renderTestimonial()}
       </section>
-      <footer className="text-sm uppercase text-stone-600 mt-4">
+      <footer className="text-sm uppercase text-stone-600 mt-4 z-10">
         {university}
       </footer>
     </article>
