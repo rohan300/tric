@@ -1,0 +1,44 @@
+{
+  "testimonials": [
+    {
+      "id": "222_3362",
+      "name": "RIDDHIMA.",
+      "testimonialText": "\"Two weeks ago, I had an orgo exam, chem exam, bio exam, ochem lab report, and physiology lab report all due within a week. If I had this, I would [not have crashed out].\"",
+      "highlightedPhrases": ["not have crashed out"],
+      "year": "FRESHMAN",
+      "university": "CASE WESTERN RESERVE UNIVERSITY"
+    },
+    {
+      "id": "222_3363",
+      "name": "SHIRLEY.",
+      "testimonialText": "\"Just this week, There were two tests in two [consecutive] days. So I feel like when there are multiple things in quick succession...you need to know how to [prioritize] which one.\"",
+      "highlightedPhrases": ["consecutive", "prioritize"],
+      "year": "FRESHMAN",
+      "university": "GEORGETOWN UNIVERSITY"
+    },
+    {
+      "id": "222_3364",
+      "name": "SHREYA.",
+      "testimonialText": "\"I need this. It's not in anything else that I use.\"",
+      "highlightedPhrases": [],
+      "year": "FRESHMAN",
+      "university": "BOSTON UNIVERSITY"
+    },
+    {
+      "id": "222_3365",
+      "name": "AYLA FANG.",
+      "testimonialText": "\"I like the roadmap because sometimes [I don’t know] where to start when planning.\"",
+      "highlightedPhrases": ["I dont't know"],
+      "year": "FRESHMAN",
+      "university": "GEORGETOWN UNIVERSITY"
+    },
+    {
+      "id": "222_3366",
+      "name": "MIHIKA GUPTA.",
+      "testimonialText": "\"This would help me [every single day].\"",
+      "highlightedPhrases": ["every single day"],
+      "year": "FRESHMAN",
+      "university": "BOSTON UNIVERSITY"
+    }
+  ]
+}
