@@ -6,7 +6,6 @@ import Home from "./pages/HomePage";
 import Testimonials from "./sections/HeroSectionTestimonial";
 import Features from "./sections/HeroSectionFeatures";
 import Pricing from "./sections/HeroSectionPricing";
-import Waitlist from "./sections/HeroSectionWaitlist";
 import Footer from "./sections/HeroSectionFooter";
 import testimonialsData from "./data/testimonialData.json";
 
