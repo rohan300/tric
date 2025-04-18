@@ -5,6 +5,7 @@ import Core from "../assets/core.svg";
 import Plus from "../assets/plus.svg";
 import Pro from "../assets/pro.svg";
 import FadeInSection from "../components/FadeInSection";
+import bgImage from "../assets/pricingBG.png";
 
 const HeroSectionPricing: React.FC = () => {
   const cards: PricingCardProps[] = [
@@ -60,8 +61,8 @@ const HeroSectionPricing: React.FC = () => {
 
   return (
     <section
-      className="h-[90vh] w-full px-[5vh] sm:px-6 md:px-8 flex flex-col"
-      style={{ paddingTop: "5vh", paddingBottom: "5vh" }}
+      className="h-[90vh] w-full px-[5vh] sm:px-6 md:px-8 flex flex-col bg-cover bg-center bg-no-repeat"
+      style={{ paddingTop: "5vh", paddingBottom: "5vh", backgroundImage: `url(${bgImage})` }}
     >
       <FadeInSection>
         <h2 className="mb-8 text-center text-4xl font-inter font-bold">
