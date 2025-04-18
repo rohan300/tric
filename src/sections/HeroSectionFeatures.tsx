@@ -8,7 +8,7 @@ import Lottie from "lottie-react";
 import canvasIntegration from "../assets/CanvasInteg.json";
 import whatNext from "../assets/whatNext.json";
 import scheduleAnimation from "../assets/Sched.json";
-import rescheduleAnimation from "../assets/Rescheduling.json";
+import rescheduleAnimation from "../assets/Resched.json";
 import PlayIcon from "../assets/play_icon.svg";
 import walkthroughGif from "../assets/TricDemo.gif";
 
