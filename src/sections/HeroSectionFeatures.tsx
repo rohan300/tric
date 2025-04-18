@@ -5,9 +5,9 @@ import FadeInSection from "../components/FadeInSection";
 import Lottie from "lottie-react";
 
 // assets
-import canvasIntegration from "../assets/CanvasIntegration.json";
+import canvasIntegration from "../assets/CanvasInteg.json";
 import whatNext from "../assets/whatNext.json";
-import scheduleAnimation from "../assets/Scheduling.json";
+import scheduleAnimation from "../assets/Sched.json";
 import rescheduleAnimation from "../assets/Rescheduling.json";
 import PlayIcon from "../assets/play_icon.svg";
 import walkthroughGif from "../assets/TricDemo.gif";

@@ -30,7 +30,6 @@ const App: React.FC = () => {
         <div id="pricing" className="anchor-offset">
           <Pricing />
         </div>
-        <Waitlist />
         <div id="contact">
           <Footer />
         </div>
