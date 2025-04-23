@@ -54,19 +54,15 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({ customData }) =
   return (
     <section className="h-[90vh] w-full py-12 md:py-16 lg:py-20 overflow-hidden">
       <FadeInSection>
-      {/* Heading container */}
-      <div className="container mx-auto px-4 pt-[5vh]">
-        {/* Combined heading text on one line */}
-        <h2 className="mb-10 md:mb-16 text-center text-xl md:text-4xl font-light whitespace-nowrap font-inter text-[#6D5E56]">
-          Join Our{" "}
-          <span 
-            className="inline-block text-3xl md:text-6xl lg:text-6xl font-bold mb-2 font-baloo"
-          >
-            Tric
-          </span>{" "}
-          Community with students from Universities across the United States
-        </h2>
-      </div>
+        <div className="container mx-auto px-4 pt-[5vh]">
+          <h2 className="mb-10 md:mb-16 text-center text-xl md:text-4xl font-light whitespace-normal font-inter text-[#6D5E56]">
+            Join Our{" "}
+            <span className="inline-block text-3xl md:text-6xl lg:text-6xl font-bold mb-2 font-baloo">
+              Tric
+            </span>{" "}
+            Community with students from Universities across the United States
+          </h2>
+        </div>
       </FadeInSection>
       <FadeInSection>
       {/* Full-width container for testimonials with 10vh top padding */}
