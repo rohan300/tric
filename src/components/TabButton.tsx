@@ -6,6 +6,7 @@ interface TabButtonProps {
   label: string;
   active: boolean;
   onClick: () => void;
+  className?: string;
 }
 
 const TabButton: React.FC<TabButtonProps> = ({ label, active, onClick }) => {

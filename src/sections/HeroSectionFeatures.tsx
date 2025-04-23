@@ -77,30 +77,32 @@ const HeroSection: React.FC = () => {
       <div className="h-full flex flex-col">
         {/* Navigation Buttons */}
         <FadeInSection>
-          <nav className="flex flex-wrap justify-center gap-4 mb-8">
+          {/* Changed to grid for mobile with 2x2 layout */}
+          <nav className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 mb-8">
             {tabs.map((tab) => (
               <TabButton
                 key={tab}
                 label={tab}
                 active={tab === selectedTab}
                 onClick={() => setSelectedTab(tab)}
+                className="w-full sm:w-auto"  // Full width on mobile, auto on larger screens
               />
             ))}
           </nav>
         </FadeInSection>
 
         <FadeInSection>
-          {/* Content area fills remaining space */}
-          <div className="flex-1 flex flex-col md:flex-row md:justify-between gap-8 px-[15vw] py-[10vh]">
+          {/* Content area modified for mobile responsiveness */}
+          <div className="flex-1 flex flex-col md:flex-row md:justify-between gap-8 px-4 sm:px-[15vw] py-6 sm:py-[10vh]">
             {/* Left side: Text content */}
             <div className="flex-1 text-center md:text-left font-inter">
               <h2
-                className="text-2xl sm:text-3xl md:text-4xl font-bold mb-[5vh]"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-[5vh]"
                 style={{ color: "#401700" }}
               >
                 {content.heading}
               </h2>
-              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-black mb-[5vh]">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-black mb-4 sm:mb-[5vh]">
                 {content.subHeading}
               </h3>
               <p
@@ -110,15 +112,18 @@ const HeroSection: React.FC = () => {
                 {content.description}
               </p>
             </div>
-            {/* Right side: Image or Lottie animation */}
-            <div className="flex-1 flex justify-center">
+            
+            {/* Right side: Image or Lottie animation in fixed container for mobile */}
+            <div className="flex-1 flex justify-center items-center h-64 sm:h-auto mt-6 md:mt-0">
               {content.animationData ? (
-                <Lottie
-                  animationData={content.animationData}
-                  loop
-                  autoplay
-                  style={{ width: "80%", height: "auto" }}
-                />
+                <div className="w-full h-full flex justify-center items-center">
+                  <Lottie
+                    animationData={content.animationData}
+                    loop
+                    autoplay
+                    style={{ width: "80%", height: "100%" }}
+                  />
+                </div>
               ) : (
                 <img
                   src={content.imageUrl}
@@ -147,7 +152,7 @@ const HeroSection: React.FC = () => {
       {/* Modal Overlay for the GIF */}
       {isGifOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
+          className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50 p-4"
           onClick={() => setIsGifOpen(false)}
         >
           <div
