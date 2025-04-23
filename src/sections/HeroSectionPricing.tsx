@@ -61,18 +61,18 @@ const HeroSectionPricing: React.FC = () => {
 
   return (
     <section
-      className="h-[90vh] w-full px-[5vh] sm:px-6 md:px-8 flex flex-col bg-cover bg-center bg-no-repeat"
+      className="min-h-screen w-full px-4 sm:px-6 md:px-8 flex flex-col bg-cover bg-center bg-no-repeat"
       style={{ paddingTop: "5vh", paddingBottom: "5vh", backgroundImage: `url(${bgImage})` }}
     >
       <FadeInSection>
-        <h2 className="mb-8 text-center text-4xl font-inter font-bold">
+        <h2 className="mb-8 text-center text-3xl md:text-4xl font-inter font-bold">
           Our Pricing Plans
         </h2>
       </FadeInSection>
       <FadeInSection>
-        <div className="flex-1 flex flex-col gap-6 md:flex-row md:justify-center md:items-stretch px-[20vh] pt-[5vh]">
+        <div className="flex-1 flex flex-col gap-6 md:flex-row md:justify-center md:items-stretch px-4 md:px-8 lg:px-20 xl:px-[20vh] pt-4 md:pt-[5vh]">
           {cards.map((card, index) => (
-            <div key={index} className="flex-1">
+            <div key={index} className="flex-1 mb-6 md:mb-0">
               <PricingCard {...card} />
             </div>
           ))}
