@@ -21,10 +21,10 @@ const Footer: React.FC = () => {
       </div>
       {/* Social Media Icons */}
       <div className="flex gap-4">
-        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/company/tricedtech" target="_blank" rel="noopener noreferrer">
           <FaLinkedinIn className="text-[#FFE2D2] text-xl hover:text-teal-600 transition-colors" />
         </a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/tric.education/" target="_blank" rel="noopener noreferrer">
           <FaInstagram className="text-[#FFE2D2] text-xl hover:text-teal-600 transition-colors" />
         </a>
       </div>
