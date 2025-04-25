@@ -19,16 +19,16 @@
     {
       "id": "222_3364",
       "name": "SHREYA.",
-      "testimonialText": "\"I need this. It's not in anything else that I use.\"",
-      "highlightedPhrases": [],
+      "testimonialText": "\"I [need this]. It's not in anything else that I use.\"",
+      "highlightedPhrases": ["need this"],
       "year": "FRESHMAN",
       "university": "BOSTON UNIVERSITY"
     },
     {
       "id": "222_3365",
       "name": "AYLA FANG.",
-      "testimonialText": "\"I like the roadmap because sometimes [I don’t know] where to start when planning.\"",
-      "highlightedPhrases": ["I dont't know"],
+      "testimonialText": "\"I like the roadmap because sometimes [I don't know] where to start.\"",
+      "highlightedPhrases": ["I don't know"],
       "year": "FRESHMAN",
       "university": "GEORGETOWN UNIVERSITY"
     },
