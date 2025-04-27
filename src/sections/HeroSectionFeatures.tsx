@@ -71,9 +71,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <section
-      className="h-[90vh] w-full px-[5vh] sm:px-6 md:px-8"
-      style={{ paddingTop: "5vh", paddingBottom: "5vh" }}
-    >
+  className="min-h-screen w-full px-[5vh] sm:px-6 md:px-8 pt-[5vh] pb-[5vh] mb-16">
       <div className="h-full flex flex-col">
         {/* Navigation Buttons */}
         <FadeInSection>
